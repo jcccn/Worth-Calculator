@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  WorthCal
+
+  Created by Jiang Chuncheng on 2/21/15.
+  Copyright (c) 2015 SenseForce. All rights reserved.
+*/
+
+CFBundleDisplayName="WorthCal";
