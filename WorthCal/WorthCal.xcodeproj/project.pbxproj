@@ -11,6 +11,8 @@
 		901569F21AA5EE7300337A1D /* icon_tie.png in Resources */ = {isa = PBXBuildFile; fileRef = 901569EF1AA5EE7300337A1D /* icon_tie.png */; };
 		901569F31AA5EE7300337A1D /* icon_tie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 901569F01AA5EE7300337A1D /* icon_tie@2x.png */; };
 		901569F41AA5EE7300337A1D /* icon_tie@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 901569F11AA5EE7300337A1D /* icon_tie@3x.png */; };
+		901569F71AA5F91900337A1D /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901569F61AA5F91900337A1D /* ViewUtils.swift */; };
+		901569F91AA5FEF600337A1D /* UIImage+ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901569F81AA5FEF600337A1D /* UIImage+ViewUtils.swift */; };
 		908549F21A970DE4005FAD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908549F11A970DE4005FAD66 /* AppDelegate.swift */; };
 		908549F91A970DE4005FAD66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908549F81A970DE4005FAD66 /* Images.xcassets */; };
 		908549FC1A970DE4005FAD66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 908549FA1A970DE4005FAD66 /* LaunchScreen.xib */; };
@@ -25,6 +27,9 @@
 		901569EF1AA5EE7300337A1D /* icon_tie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tie.png; sourceTree = "<group>"; };
 		901569F01AA5EE7300337A1D /* icon_tie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tie@2x.png"; sourceTree = "<group>"; };
 		901569F11AA5EE7300337A1D /* icon_tie@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tie@3x.png"; sourceTree = "<group>"; };
+		901569F61AA5F91900337A1D /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		901569F81AA5FEF600337A1D /* UIImage+ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ViewUtils.swift"; sourceTree = "<group>"; };
+		901569FE1AA60A9100337A1D /* WorthCal-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WorthCal-Bridging-Header.h"; sourceTree = "<group>"; };
 		908549EC1A970DE4005FAD66 /* WorthCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorthCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908549F01A970DE4005FAD66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908549F11A970DE4005FAD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +91,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		901569F51AA5F8F900337A1D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				901569F61AA5F91900337A1D /* ViewUtils.swift */,
+				901569F81AA5FEF600337A1D /* UIImage+ViewUtils.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		908549E31A970DE4005FAD66 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				90854A121A9727DE005FAD66 /* ViewControllers */,
+				901569F51AA5F8F900337A1D /* Utilities */,
 				908549F11A970DE4005FAD66 /* AppDelegate.swift */,
+				901569FE1AA60A9100337A1D /* WorthCal-Bridging-Header.h */,
 				908549F81A970DE4005FAD66 /* Images.xcassets */,
 				908549FA1A970DE4005FAD66 /* LaunchScreen.xib */,
 				901569ED1AA5EE7300337A1D /* Resources */,
@@ -262,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				908549F21A970DE4005FAD66 /* AppDelegate.swift in Sources */,
+				901569F91AA5FEF600337A1D /* UIImage+ViewUtils.swift in Sources */,
 				90854A171A972853005FAD66 /* WorthViewController.swift in Sources */,
+				901569F71AA5F91900337A1D /* ViewUtils.swift in Sources */,
 				90854A141A972809005FAD66 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,11 +392,14 @@
 			baseConfigurationReference = CAC63EF698F630C7648C9505 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WorthCal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WorthCal/WorthCal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -387,11 +408,13 @@
 			baseConfigurationReference = 3DC8B6B5694CCD4D4142744C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WorthCal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WorthCal/WorthCal-Bridging-Header.h";
 			};
 			name = Release;
 		};
