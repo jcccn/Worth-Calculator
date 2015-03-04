@@ -8,6 +8,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorthViewController" customModule="WorthCal" customModuleProvider="target">
             <connections>
                 <outlet property="calculateButton" destination="ab0-SD-tFR" id="rGQ-M8-vvO"/>
+                <outlet property="offTimeTextField" destination="pwc-YQ-7Ix" id="WxB-Kk-PVq"/>
+                <outlet property="onTimeTextField" destination="pGk-sy-6Vb" id="hQ3-sU-fHZ"/>
+                <outlet property="overtimeTextField" destination="ntO-A0-lUd" id="dlz-KK-JWH"/>
+                <outlet property="salaryTextField" destination="iEj-Dx-USO" id="ciG-RG-qnN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -89,10 +93,10 @@
                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-SD-tFR">
-                            <rect key="frame" x="250" y="280" width="100" height="36"/>
+                            <rect key="frame" x="200" y="280" width="200" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="36" id="J4l-tz-QEc"/>
-                                <constraint firstAttribute="width" constant="100" id="evu-ux-H2B"/>
+                                <constraint firstAttribute="height" constant="40" id="J4l-tz-QEc"/>
+                                <constraint firstAttribute="width" constant="200" id="evu-ux-H2B"/>
                             </constraints>
                             <state key="normal" title="计算身价">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
