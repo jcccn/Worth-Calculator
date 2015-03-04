@@ -1,3 +1,7 @@
+# The front repo is prior if conflicted
+# CocoaPods private repo
+source 'https://github.com/jcccn/PodSpecs.git'
+# CocoaPods master repo
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios,'6.1'
@@ -17,8 +21,10 @@ pod 'RESideMenu'
 
 pod 'Masonry'
 
-pod 'UMengAnalytics-NO-IDFA'
+pod 'TPKeyboardAvoiding'
 
-pod 'UMFeedback', :git => 'https://github.com/jcccn/UMeng-Feedback-iOS.git'
+pod 'UMAnalytics'
 
-pod 'ShareSDK/Normal', :git => 'https://github.com/jcccn/ShareSDK-iOS.git'
+pod 'UMFeedback'
+
+pod 'ShareSDK/Normal'
