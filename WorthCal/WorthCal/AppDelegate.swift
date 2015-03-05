@@ -63,7 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         
         MobClick.setAppVersion(NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String)
-
+        
+        UMFeedback.setAppkey("5357ebe556240baefc0315f8")
     }
 
 }
