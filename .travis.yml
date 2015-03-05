@@ -1,0 +1,4 @@
+language: objective-c
+rvm: 2.0.0
+podfile: WorthCal/Podfile
+xcode_project: WorthCal/WorthCal.xcodeproj
