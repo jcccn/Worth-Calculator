@@ -20,5 +20,15 @@ class BaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        MobClick.beginLogPageView(NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last! as String)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        MobClick.endLogPageView(NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last! as String)
+        super.viewDidDisappear(animated)
+    }
 
 }

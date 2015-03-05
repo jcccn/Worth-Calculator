@@ -17,13 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.    
         
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds);
-        self.window?.backgroundColor = UIColor.blueColor();
-        self.window?.makeKeyAndVisible();
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.blueColor()
+        self.window?.makeKeyAndVisible()
         
-        var worthViewController = WorthViewController(nibName: "WorthViewController", bundle: nil);
-        var rootViewController = UINavigationController(rootViewController: worthViewController);
-        self.window?.rootViewController = rootViewController;
+        initUmeng()
+        
+        var worthViewController = WorthViewController(nibName: "WorthViewController", bundle: nil)
+        var rootViewController = UINavigationController(rootViewController: worthViewController)
+        self.window?.rootViewController = rootViewController
         
         return true
     }
@@ -50,6 +52,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    /**
+    初始化友盟统计分析
+    */
+    func initUmeng() {
+        #if (DEBUG)
+            MobClick.startWithAppkey("5357ebe556240baefc0315f8", reportPolicy: REALTIME, channelId: "Development")
+        #else
+            MobClick.startWithAppkey("5357ebe556240baefc0315f8", reportPolicy: REALTIME, channelId: "App Store")
+        #endif
+        
+        MobClick.setAppVersion(NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String)
+
+    }
 
 }
 
