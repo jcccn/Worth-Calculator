@@ -1,4 +1,4 @@
-身价计算器
+身价计算器 [![Build Status](https://travis-ci.org/jcccn/Worth-Calculator.png)](https://travis-ci.org/jcccn/Worth-Calculator)
 ============
 
 身价计算器是一个根据月薪、上班和加班时间来估算个人身价的小工具。作者不对结果负责，仅供参考。
