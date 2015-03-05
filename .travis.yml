@@ -6,4 +6,4 @@ before_install:
     - brew update
     - brew outdated xctool || brew upgrade xctool
     - cd WorthCal && pod install
-script: xctool -workspace WorthCal.xcworkspace -scheme WorthCal build
+script: xctool -workspace WorthCal.xcworkspace -scheme WorthCal -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build
