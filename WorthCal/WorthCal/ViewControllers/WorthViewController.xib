@@ -11,6 +11,7 @@
                 <outlet property="offTimeTextField" destination="pwc-YQ-7Ix" id="WxB-Kk-PVq"/>
                 <outlet property="onTimeTextField" destination="pGk-sy-6Vb" id="hQ3-sU-fHZ"/>
                 <outlet property="overtimeTextField" destination="ntO-A0-lUd" id="dlz-KK-JWH"/>
+                <outlet property="resultLabel" destination="70u-4k-18N" id="3Hl-Lf-W5p"/>
                 <outlet property="salaryTextField" destination="iEj-Dx-USO" id="ciG-RG-qnN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +24,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-tG-l6e" customClass="TPKeyboardAvoidingScrollView">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的身价" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70u-4k-18N">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的身价" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000000000000009" translatesAutoresizingMaskIntoConstraints="NO" id="70u-4k-18N">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="bh0-1G-zAj"/>
@@ -32,7 +33,7 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月薪" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7k-g4-V5r">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月薪 [元]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7k-g4-V5r">
                             <rect key="frame" x="10" y="70" width="80" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="IFa-9t-DDA"/>

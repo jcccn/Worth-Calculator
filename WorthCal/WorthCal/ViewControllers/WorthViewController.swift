@@ -10,6 +10,7 @@ import UIKit
 
 class WorthViewController: BaseViewController {
 
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var salaryTextField: UITextField!
     @IBOutlet weak var onTimeTextField: UITextField!
     @IBOutlet weak var offTimeTextField: UITextField!
@@ -81,6 +82,8 @@ class WorthViewController: BaseViewController {
         view.endEditing(false)
         
         autofixInputs()
+        
+        showWorthResult()
     }
     
     /**
@@ -144,6 +147,14 @@ class WorthViewController: BaseViewController {
         //修正时间显示
         syncTextField(onTimeTextField, withDate: onDate)
         syncTextField(offTimeTextField, withDate: offDate)
+    }
+    
+    /**
+    计算并显示身价
+    */
+    func showWorthResult() {
+        var worthModel = Calculator.calculateWithSalary(salary, onTime: onDate, offTime: offDate, overtimeHour: overtime)
+        resultLabel.text = worthModel.desc;
     }
 
 }
