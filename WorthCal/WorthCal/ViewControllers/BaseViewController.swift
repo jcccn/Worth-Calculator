@@ -31,4 +31,41 @@ class BaseViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
 
+    /**
+    修改导航栏的返回按钮为自定义的按钮
+    */
+    func setNavigationBarBackButton() {
+        let button = UIButton(frame: CGRectMake(0, 0, 36, 36))
+        button.setImage(UIImage(named: "btn_icon_navi_back"), forState: UIControlState.Normal)
+        button.addTarget(self, action: "onBackButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+    }
+    
+    /**
+    根据是否模态弹出视图控制器来自动添加导航上的返回按钮
+    */
+    func setNavigationBarBackButtonAutomatically() {
+        if (self === self.navigationController?.viewControllers.first) {
+            setNavigationBarBackButton()
+        }
+    }
+    
+    /**
+    返回按钮点击事件
+    
+    :param: sender 按钮
+    */
+    @IBAction func onBackButtonClicked(sender: UIButton) {
+        goBack()
+    }
+    
+    /**
+    回退到上一个页面
+    */
+    func goBack() {
+        let popedViewController = self.navigationController?.popToRootViewControllerAnimated(true)
+        if ( popedViewController == nil) {
+            self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
 }

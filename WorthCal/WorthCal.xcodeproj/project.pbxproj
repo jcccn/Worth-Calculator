@@ -20,6 +20,11 @@
 		90854A171A972853005FAD66 /* WorthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90854A151A972853005FAD66 /* WorthViewController.swift */; };
 		90854A181A972853005FAD66 /* WorthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90854A161A972853005FAD66 /* WorthViewController.xib */; };
 		908EC0D81AA94D7800E9AFF9 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EC0D71AA94D7800E9AFF9 /* SideMenuViewController.swift */; };
+		908EC0DA1AA98BC000E9AFF9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EC0D91AA98BC000E9AFF9 /* AboutViewController.swift */; };
+		908EC0DC1AA98C0000E9AFF9 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 908EC0DB1AA98C0000E9AFF9 /* AboutViewController.xib */; };
+		908EC0DF1AA9944000E9AFF9 /* btn_icon_navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908EC0DD1AA9944000E9AFF9 /* btn_icon_navi_back@2x.png */; };
+		908EC0E01AA9944000E9AFF9 /* btn_icon_navi_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908EC0DE1AA9944000E9AFF9 /* btn_icon_navi_back@3x.png */; };
+		908EC0E31AA99F6400E9AFF9 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 908EC0E21AA99F6300E9AFF9 /* about.html */; };
 		909C47D51A9898F500C4C892 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 909C47D11A9873CB00C4C892 /* InfoPlist.strings */; };
 		90F66C9B1AA83999002F4360 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F66C9A1AA83999002F4360 /* Calculator.swift */; };
 		90F66C9D1AA83A8C002F4360 /* WorthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F66C9C1AA83A8C002F4360 /* WorthModel.swift */; };
@@ -42,6 +47,11 @@
 		90854A151A972853005FAD66 /* WorthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorthViewController.swift; sourceTree = "<group>"; };
 		90854A161A972853005FAD66 /* WorthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorthViewController.xib; sourceTree = "<group>"; };
 		908EC0D71AA94D7800E9AFF9 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		908EC0D91AA98BC000E9AFF9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		908EC0DB1AA98C0000E9AFF9 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		908EC0DD1AA9944000E9AFF9 /* btn_icon_navi_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_icon_navi_back@2x.png"; sourceTree = "<group>"; };
+		908EC0DE1AA9944000E9AFF9 /* btn_icon_navi_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_icon_navi_back@3x.png"; sourceTree = "<group>"; };
+		908EC0E21AA99F6300E9AFF9 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
 		909C47D01A9873CB00C4C892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		909C47D31A98743600C4C892 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		90F66C9A1AA83999002F4360 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -83,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				901569EE1AA5EE7300337A1D /* Images */,
+				908EC0E11AA99F6300E9AFF9 /* Html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -93,6 +104,8 @@
 				901569EF1AA5EE7300337A1D /* icon_tie.png */,
 				901569F01AA5EE7300337A1D /* icon_tie@2x.png */,
 				901569F11AA5EE7300337A1D /* icon_tie@3x.png */,
+				908EC0DD1AA9944000E9AFF9 /* btn_icon_navi_back@2x.png */,
+				908EC0DE1AA9944000E9AFF9 /* btn_icon_navi_back@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -156,8 +169,18 @@
 				90854A151A972853005FAD66 /* WorthViewController.swift */,
 				90854A161A972853005FAD66 /* WorthViewController.xib */,
 				908EC0D71AA94D7800E9AFF9 /* SideMenuViewController.swift */,
+				908EC0D91AA98BC000E9AFF9 /* AboutViewController.swift */,
+				908EC0DB1AA98C0000E9AFF9 /* AboutViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		908EC0E11AA99F6300E9AFF9 /* Html */ = {
+			isa = PBXGroup;
+			children = (
+				908EC0E21AA99F6300E9AFF9 /* about.html */,
+			);
+			path = Html;
 			sourceTree = "<group>";
 		};
 		90F66C991AA83983002F4360 /* Business */ = {
@@ -233,9 +256,13 @@
 			files = (
 				909C47D51A9898F500C4C892 /* InfoPlist.strings in Resources */,
 				901569F41AA5EE7300337A1D /* icon_tie@3x.png in Resources */,
+				908EC0DF1AA9944000E9AFF9 /* btn_icon_navi_back@2x.png in Resources */,
+				908EC0DC1AA98C0000E9AFF9 /* AboutViewController.xib in Resources */,
 				901569F21AA5EE7300337A1D /* icon_tie.png in Resources */,
 				908549FC1A970DE4005FAD66 /* LaunchScreen.xib in Resources */,
+				908EC0E01AA9944000E9AFF9 /* btn_icon_navi_back@3x.png in Resources */,
 				90854A181A972853005FAD66 /* WorthViewController.xib in Resources */,
+				908EC0E31AA99F6400E9AFF9 /* about.html in Resources */,
 				901569F31AA5EE7300337A1D /* icon_tie@2x.png in Resources */,
 				908549F91A970DE4005FAD66 /* Images.xcassets in Resources */,
 			);
@@ -297,6 +324,7 @@
 				908EC0D81AA94D7800E9AFF9 /* SideMenuViewController.swift in Sources */,
 				908549F21A970DE4005FAD66 /* AppDelegate.swift in Sources */,
 				901569F91AA5FEF600337A1D /* UIImage+ViewUtils.swift in Sources */,
+				908EC0DA1AA98BC000E9AFF9 /* AboutViewController.swift in Sources */,
 				90854A171A972853005FAD66 /* WorthViewController.swift in Sources */,
 				901569F71AA5F91900337A1D /* ViewUtils.swift in Sources */,
 				90854A141A972809005FAD66 /* BaseViewController.swift in Sources */,
