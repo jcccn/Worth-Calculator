@@ -19,6 +19,7 @@
 		90854A141A972809005FAD66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90854A131A972809005FAD66 /* BaseViewController.swift */; };
 		90854A171A972853005FAD66 /* WorthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90854A151A972853005FAD66 /* WorthViewController.swift */; };
 		90854A181A972853005FAD66 /* WorthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90854A161A972853005FAD66 /* WorthViewController.xib */; };
+		908EC0D81AA94D7800E9AFF9 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EC0D71AA94D7800E9AFF9 /* SideMenuViewController.swift */; };
 		909C47D51A9898F500C4C892 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 909C47D11A9873CB00C4C892 /* InfoPlist.strings */; };
 		90F66C9B1AA83999002F4360 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F66C9A1AA83999002F4360 /* Calculator.swift */; };
 		90F66C9D1AA83A8C002F4360 /* WorthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F66C9C1AA83A8C002F4360 /* WorthModel.swift */; };
@@ -40,6 +41,7 @@
 		90854A131A972809005FAD66 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		90854A151A972853005FAD66 /* WorthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorthViewController.swift; sourceTree = "<group>"; };
 		90854A161A972853005FAD66 /* WorthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorthViewController.xib; sourceTree = "<group>"; };
+		908EC0D71AA94D7800E9AFF9 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		909C47D01A9873CB00C4C892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		909C47D31A98743600C4C892 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		90F66C9A1AA83999002F4360 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				90854A131A972809005FAD66 /* BaseViewController.swift */,
 				90854A151A972853005FAD66 /* WorthViewController.swift */,
 				90854A161A972853005FAD66 /* WorthViewController.xib */,
+				908EC0D71AA94D7800E9AFF9 /* SideMenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908EC0D81AA94D7800E9AFF9 /* SideMenuViewController.swift in Sources */,
 				908549F21A970DE4005FAD66 /* AppDelegate.swift in Sources */,
 				901569F91AA5FEF600337A1D /* UIImage+ViewUtils.swift in Sources */,
 				90854A171A972853005FAD66 /* WorthViewController.swift in Sources */,

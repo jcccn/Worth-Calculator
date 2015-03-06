@@ -9,10 +9,10 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, RESideMenuDelegate {
 
     var window: UIWindow?
-
+    weak var contentNavigationController: UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.    
@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         initUmeng()
         
-        var worthViewController = WorthViewController(nibName: "WorthViewController", bundle: nil)
-        var rootViewController = UINavigationController(rootViewController: worthViewController)
-        self.window?.rootViewController = rootViewController
+        self.window?.rootViewController = configViewControllersWithOptions(launchOptions)
         
         return true
     }
@@ -65,6 +63,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MobClick.setAppVersion(NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String)
         
         UMFeedback.setAppkey("5357ebe556240baefc0315f8")
+    }
+    
+    /**
+    初始化界面元素
+    
+    :param: launchOptions 启动参数
+    
+    :returns: 根视图控制器
+    */
+    func configViewControllersWithOptions(launchOptions: [NSObject: AnyObject]?) -> UIViewController {
+        //设置导航栏背景
+        UINavigationBar.appearance().setBackgroundImage(UIImage.imageWithColor(UIColor(red: 189/255.0, green: 94/255.0, blue: 288/255.0, alpha: 1.0), forSize: CGSizeMake(1, 64)), forBarMetrics: UIBarMetrics.Default)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.boldSystemFontOfSize(20)]
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor();
+        
+        //配置侧边栏
+        let worthViewController = WorthViewController(nibName: "WorthViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: worthViewController)
+        contentNavigationController = navigationController
+        let menuViewController = SideMenuViewController()
+        let sideMenu  = RESideMenu(contentViewController: navigationController, leftMenuViewController: menuViewController, rightMenuViewController: nil)
+        sideMenu.delegate = self;
+        var sideMenuBackgroud = UIImage.imageWithColor(UIColor.whiteColor(), forSize: CGSizeMake(3, 3))
+        sideMenuBackgroud = sideMenuBackgroud.resizableImageWithCapInsets(UIEdgeInsetsMake(1, 1, 1, 1), resizingMode: UIImageResizingMode.Stretch)
+        sideMenu.backgroundImage = sideMenuBackgroud
+        sideMenu.panFromEdge = true;
+        sideMenu.contentViewScaleValue = 0.6
+        sideMenu.contentViewInPortraitOffsetCenterX = -0.2 * sideMenu.contentViewScaleValue * CGRectGetMidX(UIScreen.mainScreen().bounds)
+        
+        return sideMenu
     }
 
 }

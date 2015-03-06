@@ -6,3 +6,4 @@
 #import <TPKeyboardAvoiding/TPKeyboardAvoidingScrollView.h>
 #import <UMAnalytics/MobClick.h>
 #import <UMFeedback/UMFeedback.h>
+#import <RESideMenu/RESideMenu.h>
