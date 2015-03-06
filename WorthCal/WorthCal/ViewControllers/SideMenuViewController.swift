@@ -64,6 +64,8 @@ class SideMenuViewController: BaseViewController, RETableViewManagerDelegate {
             item.deselectRowAnimated(true)
             self.sideMenuViewController.hideMenuViewController()
             
+            Appirater.rateApp()
+            
             return
         })
         item?.cellHeight = kMenuItemHeight

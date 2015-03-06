@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RESideMenuDelegate {
         
         self.window?.rootViewController = configViewControllersWithOptions(launchOptions)
         
+        initAppRating()
+        
         return true
     }
 
@@ -40,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RESideMenuDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        Appirater.appEnteredForeground(true)
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -63,6 +66,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, RESideMenuDelegate {
         MobClick.setAppVersion(NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String)
         
         UMFeedback.setAppkey("5357ebe556240baefc0315f8")
+    }
+    
+    /**
+    初始化App评级功能
+    */
+    func initAppRating() {
+        Appirater.setAppId("974476273")
+        Appirater.setDaysUntilPrompt(7)         //使用N天后跳出提示
+        Appirater.setUsesUntilPrompt(7)         //使用N次后跳出提示
+        Appirater.setTimeBeforeReminding(7)     //点击稍候提醒，设置N天后再提示
+        Appirater.setOpenInAppStore(true)
+        Appirater.setDebug(false)
+        
+        Appirater.appLaunched(true)
     }
     
     /**

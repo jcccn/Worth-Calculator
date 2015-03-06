@@ -9,3 +9,4 @@
 #import <RESideMenu/RESideMenu.h>
 #import <RETableViewManager/RETableViewManager.h>
 #import <Masonry/Masonry.h>
+#import <Appirater/Appirater.h>
