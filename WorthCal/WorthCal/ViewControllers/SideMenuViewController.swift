@@ -108,7 +108,7 @@ class SideMenuViewController: BaseViewController, RETableViewManagerDelegate {
         var frame = CGRectZero;
         frame.size.width = 0.64 * size.width
         let items: AnyObject? = tableViewManager?.sections.first?.items
-        frame.size.height = kMenuItemHeight * CGFloat((items as NSArray).count)
+        frame.size.height = kMenuItemHeight * CGFloat((items as! NSArray).count)
         frame.origin.y = 0.5 * (size.height - CGRectGetHeight(frame))
         self.tableView?.frame = frame;
     }

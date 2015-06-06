@@ -25,7 +25,7 @@ class AboutViewController: BaseViewController {
         iconImageView.layer.cornerRadius = 12.0
         iconImageView.layer.masksToBounds = true
         
-        versionLabel.text = String(format: "V %@", (NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as String))
+        versionLabel.text = String(format: "V %@", (NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as! String))
         
         webView.scrollView.bounces = false
         webView.loadRequest(NSURLRequest(URL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("about", ofType: "html")!)!))
